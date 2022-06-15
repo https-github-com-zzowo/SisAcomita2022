@@ -43,5 +43,14 @@ class PartnerSeeder extends Seeder
             'email'=>'ismael@email',
             'address'=>'Jr. San Agustin Nro. 236',
         ]);
+        partner::create([
+            'name'=>'Yeny Judith',
+            'lastname'=>'Lopez Tito',
+            'dni'=>'45674954',
+            'phone'=>'934536441',
+            'birthdate'=>'2001-01-03',
+            'email'=>'yeny@email',
+            'address'=>'Jr. 4 de noviembre Nro. 156',
+        ]);
     }
 }

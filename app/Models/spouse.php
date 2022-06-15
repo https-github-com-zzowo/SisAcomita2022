@@ -9,8 +9,7 @@ class spouse extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'id';
-    protected $fillable=['fullname', 'dni', 'phone', 'partner_id'];
+    protected $fillable=['fullname', 'dni', 'phone', 'email', 'partner_id'];
 
     //Relacion de 1 a 1 inveresa
     public function partner(){

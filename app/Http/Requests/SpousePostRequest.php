@@ -13,7 +13,7 @@ class SpousePostRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -27,6 +27,7 @@ class SpousePostRequest extends FormRequest
             'fullname'=>'required',
             'dni'=>'required',
             'phone'=>'required',
+            'email'=>'required',
             'partner_id'=>'required'
         ];
     }

@@ -19,18 +19,21 @@ class SpouseSeeder extends Seeder
             'fullname'=>'Ethan Anderson',
             'dni'=>'75784734',
             'phone'=>'995056734',
+            'email'=>'ethan@email',
             'partner_id'=>1
         ]);
         spouse::create([
             'fullname'=>'Yamileth Rodriguez Mayta',
             'dni'=>'75846583',
             'phone'=>'948597362',
+            'email'=>'yamileth@email',
             'partner_id'=>2
         ]);
         spouse::create([
             'fullname'=>'Milagros del Carmen',
             'dni'=>'09528543',
             'phone'=>'983756376',
+            'email'=>'milagros@email',
             'partner_id'=>3
         ]);
     }

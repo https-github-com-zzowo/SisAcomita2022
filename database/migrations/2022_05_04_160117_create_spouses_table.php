@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('fullname');
             $table->string('dni');
             $table->string('phone');
+            $table->string('email');
             $table->unsignedBigInteger('partner_id');
             $table->foreign('partner_id')->references('id')->on('partners')->onDelete('cascade');
             $table->timestamps();
