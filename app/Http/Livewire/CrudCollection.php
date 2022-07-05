@@ -21,7 +21,7 @@ class CrudCollection extends Component
 
         $collections=Collection::orderBy('id', 'desc')->paginate();
         $payments=Payment::pluck('import', 'id', 'observations', 'date');
-        $activities=activity::pluck('id', 'name', 'description','datetime', 'status');
+        $activities=activity::pluck('name', 'id', 'description','datetime', 'status');
         $assistences=assistence::pluck('id', 'status');
         $partners=partner::pluck('name', 'lastname', 'id');
         return view('livewire.crud-collection', compact('collections', 'payments', 'activities', 'assistences', 'partners'));

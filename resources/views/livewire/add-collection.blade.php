@@ -12,6 +12,11 @@
                         <x-jet-input-error for="collection.name" />
                     </div>
                 </div>
+                <div class="mb-2 md:mr-2 md:mb-0 w-full">
+                    <x-jet-label value="Actividad Relacionada" class="font-bold"/>
+                    {!! Form::select('activity.name',$activities,null,["wire:model.defer"=>"collection.activity_id",'placeholder'=>'Seleccione Opción','class'=>'border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm w-full']) !!}
+                    <x-jet-input-error for=""/>
+                  </div>
                 <div class="flex justify-between mx-2 mb-6">
                     <div class="mb-2 md:mr-2 md:mb-0 w-full">
                         <x-jet-label value="Fecha" class="font-bold" />
