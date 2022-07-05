@@ -18,7 +18,7 @@ class PartnerSeeder extends Seeder
     {
         partner::create([
             'name'=>'Magaly Elena',
-            'lastname'=>'Contreras',
+            'lastname'=>'Quispe Quispe ',
             'dni'=>'7645783',
             'phone'=>'925709908',
             'birthdate'=>'2000-06-05',

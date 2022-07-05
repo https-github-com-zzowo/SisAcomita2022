@@ -5,12 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Fine extends Model
+class Collection extends Model
 {
     use HasFactory;
 
     //Relacion de * a * inversa
     public function activities(){
         return $this->belongsToMany(activity::class);
+    }
+
+    //Relacion de 1 a *
+    public function payments(){
+        return $this->hasMany(Payment::class);
+    }
+
+    //Relacion de 1 a 1 inveresa
+    public function assistence(){
+        return $this->hasOne(assistence::class);
     }
 }

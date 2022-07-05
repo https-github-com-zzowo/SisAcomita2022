@@ -11,15 +11,22 @@ class activity extends Model
     use HasFactory;
 
     //Relacion de * a *
-    public function fines(){
-        return $this->belongsToMany(Fine::class);
+    public function collections(){
+        return $this->belongsToMany(Collection::class);
     }
-    //Relacion de muchos a muchos
+    //Relacion de 1 a muchos
     public function assistences(){
-        return $this->belongsToMany(assistence::class);
+        return $this->hasMany(assistence::class);
     }
     //Relacion de 1 a 1
     public function post(){
         return $this->hasOne(post::class);
     }
+
+    //Relacion de 1 a 1
+    public function payment(){
+        return $this->hasOne(payment::class);
+    }
+
+
 }

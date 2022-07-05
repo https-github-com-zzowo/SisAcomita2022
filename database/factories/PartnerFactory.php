@@ -25,7 +25,6 @@ class PartnerFactory extends Factory
             'birthdate'=>$this->faker->date,
             'email'=>$this->faker->email,
             'address'=>$this->faker->address,
-            'user_id'=>User::all()->random()->id,
         ];
     }
 }

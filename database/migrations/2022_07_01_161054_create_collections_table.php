@@ -13,17 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fines', function (Blueprint $table) {
+        Schema::create('collections', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->date('date');
-            $table->enum('status', ['debe', 'cancelado']);
-            $table->unsignedBigInteger('activity_id');
-            $table->foreign('activity_id')->references('id')->on('activities')->onDelete('cascade');
-            $table->unsignedBigInteger('partner_id');
-            $table->foreign('partner_id')->references('id')->on('partners')->onDelete('cascade');
-            $table->unsignedBigInteger('assistence_id');
+            $table->string('amount');
+            $table->enum('type', ['multa', 'cuota']);
+            $table->enum('status', [0, 1])->default(0); // 0:Pendiente, 1:Cobrado
+            $table->unsignedBigInteger('assistence_id')->nullable(false);
             $table->foreign('assistence_id')->references('id')->on('assistences')->onDelete('cascade');
             $table->timestamps();
+
+
+
         });
     }
 
@@ -34,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fines');
+        Schema::dropIfExists('collections');
     }
 };

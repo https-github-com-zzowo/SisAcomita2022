@@ -26,14 +26,19 @@ class DatabaseSeeder extends Seeder
         $this->call(PartnerSeeder::class);
         $this->call(SpouseSeeder::class);
         $this->call(SonSeeder::class);
+        $this->call(ActivitySeeder::class);
+        $this->call(AssistenceSeeder::class);
+        $this->call(CollectionSeeder::class);
+        $this->call(PaymentSeeder::class);
+        $this->call(PeriodSeeder::class);
 
         //partner::factory(20)->create();
         //son::factory(20)->create();
         //spouse::factory(20)->create();
         //activity::factory(20)->create();
         //assistence::factory(20)->create();
-        //Fine::factory(20)->create();
         //stand::factory(30)->create();
+
         //$this->call(PostSeeder::class);
     }
 }

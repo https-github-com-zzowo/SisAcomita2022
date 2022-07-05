@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\CrudCollection;
+use App\Http\Livewire\CrudPeriod;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +27,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/collection', CrudCollection::class)->name('collection');
+    Route::get('/period', CrudPeriod::class)->name('period');
 });
+
