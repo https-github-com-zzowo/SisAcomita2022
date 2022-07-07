@@ -1,6 +1,3 @@
-<div>
-    {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
-</div>
 <div class="py-5">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
@@ -48,7 +45,7 @@
                   <td class="px-6 py-4">{{$item->dateout}}</td>
                   <td class="px-6 py-4">
                     @if ($item->status==0)
-                        <x-jet-danger-button>Inactivo</x-jet-danger-button>
+                        <x-jet-danger-button wire:click="activePeriod({{$item}})">Inactivo</x-jet-danger-button>
                     @else
                         <x-jet-button class="bg-green-600">Activo</x-jet-button>
                     @endif
@@ -95,7 +92,7 @@
               }).then((result) => {
                 if (result.isConfirmed) {
                     //alert("del");
-                    Livewire.emitTo('crud-team','delete',id);
+                    Livewire.emitTo('crud-period','delete',id);
                     Swal.fire(
                         'Deleted!',
                         'Your file has been deleted.',
