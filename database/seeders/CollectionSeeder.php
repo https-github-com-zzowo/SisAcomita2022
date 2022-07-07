@@ -21,6 +21,7 @@ class CollectionSeeder extends Seeder
             'date'=>'2022-08-12',
             'amount'=>'30',
             'type'=>'cuota',
+            'partner_id'=>'1',
             'assistence_id'=>'1'
         ]);
     }

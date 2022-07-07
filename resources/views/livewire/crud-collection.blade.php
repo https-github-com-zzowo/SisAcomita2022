@@ -42,7 +42,7 @@
                       {{$item->id}}
                     </span>
                   </td>
-                  <td class="px-6 py-4">{{$item->partner->name ?? 'aqui va el nombre'}}</td>
+                  <td class="px-6 py-4">{{\App\Models\partner::find($item->partner_id)->name}}</td>
                   <td class="px-6 py-4">{{$item->name}}</td>
                   <td class="px-6 py-4">{{$item->amount}}</td>
                   <td class="px-6 py-4">{{$item->type}}</td>
@@ -53,7 +53,11 @@
                         <x-jet-button class="bg-green-600">Cobrado</x-jet-button>
                     @endif
                   </td>
-                  <td class="px-6 py-4">{{$item->payment->import ?? 'Pago pendiente'}}</td>
+
+                  <td class="px-6 py-4">
+                    @foreach ($item->payments as $i)
+                        {{$i->import}}</td>
+                    @endforeach
                   <td class="px-6 py-4">
                     {{-- @livewire('cliente-edit',['cliente'=>$item],key($item->id)) --}}
                     <x-jet-button wire:click="edit({{$item}})"> <!-- Usamos metodos magicos -->
@@ -96,7 +100,7 @@
               }).then((result) => {
                 if (result.isConfirmed) {
                     //alert("del");
-                    Livewire.emitTo('crud-team','delete',id);
+                    Livewire.emitTo('crud-collection','delete',id);
                     Swal.fire(
                         'Deleted!',
                         'Your file has been deleted.',
