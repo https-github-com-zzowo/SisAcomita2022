@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\CrudActivity;
 use App\Http\Livewire\CrudCollection;
 use App\Http\Livewire\CrudPeriod;
 use Illuminate\Support\Facades\Route;
@@ -29,5 +30,7 @@ Route::middleware([
     })->name('dashboard');
     Route::get('/collection', CrudCollection::class)->name('collection');
     Route::get('/period', CrudPeriod::class)->name('period');
+    Route::get('/activity', CrudActivity::class)->name('cactivity');
+
 });
 
