@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 </head>
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
@@ -17,7 +18,7 @@
     }
 
     :root {
-        --offcanvas-width: 290px;
+        --offcanvas-width: 270px;
         --topNavbarHeight: 56px;
     }
 
@@ -92,60 +93,30 @@
                 aria-controls="offcanvasExample">
                 <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
             </button>
-            <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold" href="#">ACOMITA2</a>
+            <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold" href="#">Frontendfunn</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
                 aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="ml-3 relative">
-                <x-jet-dropdown align="right" width="48">
-                    <x-slot name="trigger">
-                        @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                            <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                                <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
-                            </button>
-                        @else
-                            <span class="inline-flex rounded-md">
-                                <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
-                                    {{ Auth::user()->name }}
+            <div class="collapse navbar-collapse" id="topNavBar">
+                <form class="d-flex ms-auto my-3 my-lg-0">
 
-                                    <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                    </svg>
-                                </button>
-                            </span>
-                        @endif
-                    </x-slot>
-
-                    <x-slot name="content">
-                        <!-- Account Management -->
-                        <div class="block px-4 py-2 text-xs text-gray-400">
-                            {{ __('Cuenta de Usuario') }}
-                        </div>
-
-                        <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                            {{ __('Profile') }}
-                        </x-jet-dropdown-link>
-
-                        @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                            <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
-                                {{ __('API Tokens') }}
-                            </x-jet-dropdown-link>
-                        @endif
-
-                        <div class="border-t border-gray-100"></div>
-
-                        <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}" x-data>
-                            @csrf
-
-                            <x-jet-dropdown-link href="{{ route('logout') }}"
-                                     @click.prevent="$root.submit();">
-                                {{ __('Log Out') }}
-                            </x-jet-dropdown-link>
-                        </form>
-                    </x-slot>
-                </x-jet-dropdown>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-person-fill"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Preferencias</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -155,10 +126,10 @@
         <div class="offcanvas-body p-0">
             <span class="me-2"></span>
             <div class="profile">
-                <img src="https://www.bing.com/images/blob?bcid=TkooBAzVKWUE1Q"
+                <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg"
                     alt="profile_picture">
-                <h3>{{ Auth::user()->name }}</h3>
-                <p>Administrador</p>
+                <h3>Anamika Roy</h3>
+                <p>Designer</p>
             </div>
             <nav class="navbar-dark">
                 <ul class="navbar-nav">
@@ -168,7 +139,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="{{ route('dashboard') }}" class="nav-link px-3 active">
+                        <a href="#" class="nav-link px-3 active">
                             <span class="me-2"><i class="bi bi-speedometer2"></i></span>
                             <span>Dashboard</span>
                         </a>
@@ -253,7 +224,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="{{ route('collection') }}" class="nav-link px-3">
+                        <a href="#" class="nav-link px-3">
                             <span class="me-2"><i class="bi bi-calendar2-event"></i></span>
                             <span>colectas</span>
                         </a>

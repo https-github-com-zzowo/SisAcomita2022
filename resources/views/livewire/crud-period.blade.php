@@ -15,7 +15,7 @@
                         <i class="fa fa-users" aria-hidden="true"></i> Nuevo
                     </button>
                     @if($isOpen)
-                        @include('livewire.add-collection')
+                        @include('livewire.add-period')
                     @endif
             </div>
         </div>
@@ -82,20 +82,21 @@
         <script>
           Livewire.on('deleteItem',id=>{
             Swal.fire({
-              title: 'Are you sure?',
-              text: "You won't be able to revert this!",
+              title: 'Está Seguro?',
+              text: "No podrá revertir este proceso!",
               icon: 'warning',
               showCancelButton: true,
               confirmButtonColor: '#3085d6',
               cancelButtonColor: '#d33',
-              confirmButtonText: 'Yes, delete it!'
+              cancelButtonText: 'Cancelar',
+              confirmButtonText: 'Si, borrar!'
               }).then((result) => {
                 if (result.isConfirmed) {
                     //alert("del");
                     Livewire.emitTo('crud-period','delete',id);
                     Swal.fire(
-                        'Deleted!',
-                        'Your file has been deleted.',
+                        'Borrado!',
+                        'Registro borrado satisfatoriamente.',
                         'success'
                     )
 

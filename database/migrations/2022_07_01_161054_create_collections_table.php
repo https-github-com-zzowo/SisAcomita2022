@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('name');
             $table->date('date');
             $table->string('amount');
-            $table->enum('type', ['multa', 'cuota']);
+            $table->enum('type', ['multa', 'cuota'])->default('cuota');
             $table->enum('status', [0, 1])->default(0); // 0:Pendiente, 1:Cobrado
-            $table->unsignedBigInteger('partner_id');
+            $table->unsignedBigInteger('partner_id')->nullable(false);
             $table->foreign('partner_id')->references('id')->on('partners')->onDelete('cascade');
             $table->unsignedBigInteger('assistence_id')->nullable(false);
             $table->foreign('assistence_id')->references('id')->on('assistences')->onDelete('cascade');

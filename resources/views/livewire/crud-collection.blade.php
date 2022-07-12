@@ -53,7 +53,6 @@
                         <x-jet-button class="bg-green-600">Cobrado</x-jet-button>
                     @endif
                   </td>
-
                   <td class="px-6 py-4">
                     @foreach ($item->payments as $i)
                         {{$i->import}}</td>

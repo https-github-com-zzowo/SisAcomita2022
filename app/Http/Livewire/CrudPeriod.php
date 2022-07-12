@@ -14,8 +14,7 @@ class CrudPeriod extends Component
     protected $rules=[
         'period.name'=>'required',
         'period.dateinit'=>'required',
-        'period.dateout'=>'required',
-        'period.status'=>'required'
+        'period.dateout'=>'required'
     ];
 
     public function render()
