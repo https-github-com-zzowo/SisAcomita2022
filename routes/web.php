@@ -2,6 +2,8 @@
 
 use App\Http\Livewire\CrudActivity;
 use App\Http\Livewire\CrudCollection;
+use App\Http\Livewire\CrudFamily;
+use App\Http\Livewire\CrudPartner;
 use App\Http\Livewire\CrudPeriod;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +22,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -31,6 +35,8 @@ Route::middleware([
     Route::get('/collection', CrudCollection::class)->name('collection');
     Route::get('/period', CrudPeriod::class)->name('period');
     Route::get('/activity', CrudActivity::class)->name('activity');
+    Route::get('/family', CrudFamily::class)->name('family');
+    Route::get('/partner', CrudPartner::class)->name('partner');
 
 });
 

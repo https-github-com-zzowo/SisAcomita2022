@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('lastname');
             $table->string('dni');
             $table->string('phone');
-            $table->date('birthdate');
+            $table->string('birthdate');
             $table->string('email')->nullable();
             $table->string('address');
             //$table->unsignedBigInteger('user_id');
