@@ -30,7 +30,7 @@ Route::middleware([
     })->name('dashboard');
     Route::get('/collection', CrudCollection::class)->name('collection');
     Route::get('/period', CrudPeriod::class)->name('period');
-    Route::get('/activity', CrudActivity::class)->name('cactivity');
+    Route::get('/activity', CrudActivity::class)->name('activity');
 
 });
 

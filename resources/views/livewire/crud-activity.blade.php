@@ -90,7 +90,7 @@
               }).then((result) => {
                 if (result.isConfirmed) {
                     //alert("del");
-                    Livewire.emitTo('crud-team','delete',id);
+                    Livewire.emitTo('crud-activity','delete',id);
                     Swal.fire(
                         'Deleted!',
                         'Your file has been deleted.',

@@ -51,6 +51,8 @@ class CrudPeriod extends Component
         $period->delete();
     }
 
+
+
     public function activePeriod(Period $period){
         $periods=Period::all();
         foreach ($periods as $item) {

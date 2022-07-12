@@ -10,6 +10,7 @@ class CrudActivity extends Component
 {
     public $activity, $search;
     public $isOpen=false;
+    protected $listeners=['render', 'delete'=>'delete'];
 
 
 
