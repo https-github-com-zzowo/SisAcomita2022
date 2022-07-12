@@ -2,12 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\son;
+use App\Models\Family;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class SonSeeder extends Seeder
+class FamilySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,22 +16,28 @@ class SonSeeder extends Seeder
      */
     public function run()
     {
-        son::create([
+        Family::create([
+            'parentesco'=>'ESPOSA',
             'fullname'=>'Dayana Anderson Contreras',
+            'celphone'=>'953428107',
             'dni'=>'89647534',
-            'level'=>'primaria',
+            'age'=>'15',
             'partner_id'=>1
         ]);
-        son::create([
+        Family::create([
+            'parentesco'=>'Hijo',
             'fullname'=>'Hamilton Aguirre Rodriguez',
-            'dni'=>'98347534',
-            'level'=>'secundaria',
+            'celphone'=>'953428107',
+            'dni'=>'89647534',
+            'age'=>'15',
             'partner_id'=>2
         ]);
-        son::create([
+        Family::create([
+            'parentesco'=>'Hijo',
             'fullname'=>'David Lopez del Carmen',
+            'celphone'=>'953428107',
             'dni'=>'89647534',
-            'level'=>'primaria',
+            'age'=>'15',
             'partner_id'=>3
         ]);
     }

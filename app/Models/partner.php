@@ -14,18 +14,20 @@ class partner extends Model
     //protected $fillable=['name', 'lastname', 'dni', 'phone', 'birthdate', 'email', 'address'];
 
     //Relación de 1 a *
-    public function sons(){
-        return $this->hasMany(son::class);
+      //inversa
+      public function user(){
+        return $this->belongsTo(User::class);
     }
 
-    //Relacion de 1 * 1
-    public function spouse(){
-        return $this->hasOne(spouse::class);
+
+
+    public function families(){
+        return $this->hasMany(Family::class);
     }
-    //Relacion de 1 a *
-    public function stands(){
-        return $this->hasMany(stand::class);
+    public function empadronamientos(){
+        return $this->hasMany(Empadronamiento::class);
     }
+
 
     //Relacion de 1 a *
     public function assistences(){

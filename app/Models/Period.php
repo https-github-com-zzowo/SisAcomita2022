@@ -9,4 +9,8 @@ class Period extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+
+    public function empadronamientos(){
+        return $this->hasMany(Empadronamieto::class);
+    }
 }
