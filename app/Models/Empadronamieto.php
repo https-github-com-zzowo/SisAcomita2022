@@ -9,6 +9,7 @@ class Empadronamieto extends Model
 {
     use HasFactory;
 
+    protected $guarded=['id'];
     public function stand (){
         return $this->belongsTo(stand::class);
     }

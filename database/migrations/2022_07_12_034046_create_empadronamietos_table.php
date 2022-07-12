@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('empadronamietos', function (Blueprint $table) {
             $table->id();
+            $table->string('code');
             $table->unsignedBigInteger('partner_id');
             $table->unsignedBigInteger('period_id');
             $table->unsignedBigInteger('stand_id');

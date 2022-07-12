@@ -6,9 +6,9 @@
       <x-slot name="content">
         <div class="flex justify-between mx-2 mb-6">
             <div class="mb-2 md:mr-2 md:mb-0 w-full">
-                <x-jet-label value="Nombre de torneo" class="font-bold"/>
+                <x-jet-label value="Socio" class="font-bold"/>
                 {!! Form::select('partner_id',$partners,null,["wire:model.defer"=>"family.partner_id",'placeholder'=>'Seleccione Opción','class'=>'border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm w-full']) !!}
-                <x-jet-input-error for="team.partner_id"/>
+                <x-jet-input-error for="family.partner_id"/>
               </div>
             <div class="mb-2 md:mr-2 md:mb-0 w-full">
                 <x-jet-label value="parentesco" class="font-bold"/>

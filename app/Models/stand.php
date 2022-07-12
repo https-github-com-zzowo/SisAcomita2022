@@ -9,6 +9,7 @@ class stand extends Model
 {
     use HasFactory;
 
+    protected $guarded=['id'];
     public function empadronamietos(){
         return $this->hasMany(Empadronamieto::class);
     }
