@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\SpouseController;
 use App\Http\Livewire\CrudSchool;
@@ -24,3 +25,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('schools', [CrudSchool::class, 'list']);
 Route::apiResource('partners', PartnerController::class);
 Route::apiResource('spouses', SpouseController::class);
+Route::group(['middleware' => 'api','prefix' => 'auth'], function ($router) {
+    Route::post('login',[AuthController::class,'login']);
+    Route::post('logout',[AuthController::class,'logout']);
+    Route::post('refresh',[AuthController::class,'refresh']);
+    Route::post('register',[AuthController::class,'register']);
+    Route::get('me',[AuthController::class,'me']);
+});
