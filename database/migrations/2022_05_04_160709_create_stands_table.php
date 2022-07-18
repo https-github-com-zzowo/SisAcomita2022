@@ -17,8 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->enum('status', ['Alquilado', 'Problemas', 'Normal']);
-            $table->unsignedBigInteger('partner_id');
-            $table->foreign('partner_id')->references('id')->on('partners')->onDelete('cascade');
             $table->timestamps();
         });
     }

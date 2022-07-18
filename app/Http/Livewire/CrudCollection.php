@@ -15,6 +15,14 @@ class CrudCollection extends Component
 {
     public $collection, $search;
     public $isOpen=false;
+    protected $listeners=['render', 'delete'=>'delete'];
+
+    protected $rules=[
+        'collection.name'=>'required',
+        'collection.date'=>'required',
+        'collection.amount'=>'required'
+
+    ];
 
     public function render()
     {

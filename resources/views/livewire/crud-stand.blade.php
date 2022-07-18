@@ -1,25 +1,22 @@
-<div>
-    {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
-</div>
 <div class="py-5">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
         <div class="flex items-center justify-between">
             <!--Input de busqueda   -->
             <div class="flex items-center p-2 rounded-md flex-1">
-                <label class="w-full relative text-gray-400 focus-within:text-gray-600 block">
+                <label class=" w-full relative text-gray-400 focus-within:text-gray-600 block">
                     <svg class="pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3" viewBox="0 0 25 25"  fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                    <x-jet-input type="text" wire:model="search" class="w-full block pl-14" placeholder="Buscar periodo..."/>
+                    <x-jet-input type="text" wire:model="search" class="w-full block pl-14" placeholder="Buscar equipo..."/>
                 </label>
             </div>
             <!--Boton nuevo   -->
             <div class="lg:ml-40 ml-10 space-x-8">
-                    <button wire:click="create()" class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer" >
-                        <i class="fa fa-users" aria-hidden="true"></i> Nuevo
-                    </button>
-                    @if($isOpen)
-                        @include('livewire.add-activity')
-                    @endif
+                <button wire:click="create()" class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer" >
+                    <i class="fa fa-users" aria-hidden="true"></i> Nuevo
+                </button>
+                @if($isOpen)
+                    @include('livewire.add-stand')
+                @endif
             </div>
         </div>
         <!--Tabla lista de items   -->
@@ -27,16 +24,14 @@
             <table class="w-full divide-y divide-gray-200 table-auto">
               <thead class="bg-indigo-500 text-white">
                 <tr class="text-left text-xs font-bold  uppercase">
-                  <td scope="col" class="px-6 py-3">ID</td>
-                  <td scope="col" class="px-6 py-3">name</td>
-                  <td scope="col" class="px-6 py-3">description</td>
-                  <td scope="col" class="px-6 py-3">datetime</td>
-                  <td scope="col" class="px-6 py-3">Estado</td>
-                  <td scope="col" class="px-6 py-3">Opciones</td>
+                  <td wire:click="order('id')" scope="col" class="px-6 py-3 cursor-pointer">ID</td>
+                  <td wire:click="order('name')" scope="col" class="px-6 py-3 cursor-pointer">Ubicacion</td>
+                  <td scope="col" class="px-6 py-3 cursor-pointer">estado</td>
+                  <td wire:click="order('number')" scope="col" class="px-6 py-3">Opciones</td>
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200">
-                @foreach ($activities as $item)
+                @foreach ($stands as $item)
                 <tr class="text-sm font-medium text-gray-900">
                   <td class="px-6 py-4">
                     <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-indigo-500 text-white">
@@ -44,9 +39,8 @@
                     </span>
                   </td>
                   <td class="px-6 py-4">{{$item->name}}</td>
-                  <td class="px-6 py-4">{{$item->description}}</td>
-                  <td class="px-6 py-4">{{$item->datetime}}</td>
                   <td class="px-6 py-4">{{$item->status}}</td>
+
 
                   <td class="px-6 py-4">
                     {{-- @livewire('cliente-edit',['cliente'=>$item],key($item->id)) --}}
@@ -63,12 +57,12 @@
               </tbody>
             </table>
         </div>
-        @if(!$activities->count())
+        @if(!$stands->count())
             No existe ningun registro conincidente
         @endif
-        @if($activities->hasPages())
+        @if($stands->hasPages())
             <div class="px-6 py-3">
-            {{$activities->links()}}
+            {{$stands->links()}}
             </div>
         @endif
 
@@ -90,7 +84,7 @@
               }).then((result) => {
                 if (result.isConfirmed) {
                     //alert("del");
-                    Livewire.emitTo('crud-activity','delete',id);
+                    Livewire.emitTo('crud-stand','delete',id);
                     Swal.fire(
                         'Deleted!',
                         'Your file has been deleted.',

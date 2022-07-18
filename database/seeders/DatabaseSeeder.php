@@ -24,13 +24,14 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call(UserSeeder::class);
         $this->call(PartnerSeeder::class);
-        $this->call(SpouseSeeder::class);
-        $this->call(SonSeeder::class);
+        $this->call(FamilySeeder::class);
         $this->call(ActivitySeeder::class);
         $this->call(AssistenceSeeder::class);
         $this->call(CollectionSeeder::class);
         $this->call(PaymentSeeder::class);
         $this->call(PeriodSeeder::class);
+        $this->call(StandSeeder::class);
+        $this->call(EmpadronamientoSeeder::class);
 
         //partner::factory(20)->create();
         //son::factory(20)->create();

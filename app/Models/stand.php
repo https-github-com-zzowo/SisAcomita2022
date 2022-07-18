@@ -9,8 +9,8 @@ class stand extends Model
 {
     use HasFactory;
 
-    //Relacion de 1 a * inversa
-    public function partner(){
-        return $this->hasOne(partner::class);
+    protected $guarded=['id'];
+    public function empadronamietos(){
+        return $this->hasMany(Empadronamieto::class);
     }
 }

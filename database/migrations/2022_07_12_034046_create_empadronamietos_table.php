@@ -13,14 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('spouses', function (Blueprint $table) {
+        Schema::create('empadronamietos', function (Blueprint $table) {
             $table->id();
-            $table->string('fullname');
-            $table->string('dni');
-            $table->string('phone');
-            $table->string('email');
+            $table->string('code');
             $table->unsignedBigInteger('partner_id');
+            $table->unsignedBigInteger('period_id');
+            $table->unsignedBigInteger('stand_id');
             $table->foreign('partner_id')->references('id')->on('partners')->onDelete('cascade');
+            $table->foreign('period_id')->references('id')->on('periods')->onDelete('cascade');
+            $table->foreign('stand_id')->references('id')->on('stands')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('spouses');
+        Schema::dropIfExists('empadronamietos');
     }
 };

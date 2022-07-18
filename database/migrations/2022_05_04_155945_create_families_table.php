@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sons', function (Blueprint $table) {
+        Schema::create('families', function (Blueprint $table) {
             $table->id();
+            $table->string('parentesco');
             $table->string('fullname');
+            $table->string('celphone');
             $table->string('dni');
-            $table->string('level');
+            $table->string('age');
             $table->unsignedBigInteger('partner_id');
             $table->foreign('partner_id')->references('id')->on('partners')->onDelete('cascade');
             $table->timestamps();
@@ -31,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sons');
+        Schema::dropIfExists('families');
     }
 };
