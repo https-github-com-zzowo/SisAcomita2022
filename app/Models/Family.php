@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Family extends Model
 {
     use HasFactory;
+    protected $guarded=['id'];
     //Relacion de 1 a * inversa
     public function partner(){
         return $this->belongsTo(partner::class);

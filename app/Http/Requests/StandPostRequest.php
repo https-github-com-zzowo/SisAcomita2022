@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class FamilyPostRequest extends FormRequest
+class StandPostRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,11 +24,8 @@ class FamilyPostRequest extends FormRequest
     public function rules()
     {
         return [
-            'parentesco'=>"required",
-            'fullname'=>"required",
-            'dni'=>"required",
-            'celphone'=>"required",
-            'age'=>"required",
+            'name'=>"required",
+            'status'=>"required",
         ];
     }
 }
