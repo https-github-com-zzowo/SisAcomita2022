@@ -1,10 +1,8 @@
-<x-slot name="header">
-    <h2 class=" text-center font-semibold text-xl text-gray-800 leading-tight">
-        {{ __('¡Menú de Empadronamiento!') }}
-    </h2>
-</x-slot>
-<div class="py-5">
+<div class="py-0">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class=" dark:bg-gray-700  overflow-hidden shadow-xl sm:rounded-lg px-3 py-2 mb-2">
+            <h1 class="mt-2 text-center text-2xl font-bold text-white">¡Menú Empadronamiento!</h1>
+        </div>
       <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
         <div class="flex items-center justify-between">
             <!--Input de busqueda   -->
