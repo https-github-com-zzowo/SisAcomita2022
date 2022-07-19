@@ -103,7 +103,7 @@
                 }).then((result) => {
                     if (result.isConfirmed) {
                         //alert("del");
-                        Livewire.emitTo('crud-period', 'delete', id);
+                        Livewire.emitTo('crud-payment', 'delete', id);
                         Swal.fire(
                             'Borrado!',
                             'Registro borrado satisfatoriamente.',

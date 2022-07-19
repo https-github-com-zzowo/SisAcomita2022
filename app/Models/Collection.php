@@ -9,6 +9,8 @@ class Collection extends Model
 {
     use HasFactory;
 
+    protected $guarded=['id'];
+
     //Relacion de * a * inversa
     public function activities(){
         return $this->belongsToMany(activity::class);

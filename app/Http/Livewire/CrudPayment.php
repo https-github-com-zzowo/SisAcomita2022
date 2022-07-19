@@ -16,6 +16,7 @@ class CrudPayment extends Component
     protected $rules=[
         'import'=>'required',
         'date'=>'required',
+        'partner_id'=>'required'
 
     ];
 
@@ -39,7 +40,7 @@ class CrudPayment extends Component
         }else{
             $this->payment->save();
         }
-        $this->reset(['isOpen','team']);
+        $this->reset(['isOpen','payment']);
         $this->emitTo('CrudPayment','render');
         $this->emit('alert','Registro creado satisfactoriamente');
     }
