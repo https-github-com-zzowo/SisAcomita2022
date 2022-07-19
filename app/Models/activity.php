@@ -9,6 +9,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class activity extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'description',
+        'datetime',
+        'status',
+
+
+    ];
 
     //Relacion de * a *
     public function collections(){

@@ -11,7 +11,13 @@ class CrudActivity extends Component
     public $activity, $search;
     public $isOpen=false;
     protected $listeners=['render', 'delete'=>'delete'];
+    protected $rules=[
+        'activity.name'=>'required',
+        'activity.description'=>'required',
+        'activity.datetime'=>'required',
+        'activity.status'=>'required',
 
+    ];
 
 
     public function render()
