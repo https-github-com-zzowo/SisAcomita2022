@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,7 +87,7 @@
 </style>
 <body>
     <!-- top navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
                 aria-controls="offcanvasExample">
@@ -179,6 +179,7 @@
                     </li>
                     <li>
                         <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+
                             Socios
                         </div>
                     </li>
@@ -214,7 +215,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#" class="nav-link px-3">
+                        <a href="{{ route('menuemp') }}" class="nav-link px-3">
                             <span class="me-2"><i class="bi bi-book-fill"></i></span>
                             <span>Lista de Socios</span>
                         </a>
@@ -250,7 +251,7 @@
                     </li>
                     <li>
                         <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
-                            Finanzas
+                            <a href="{{ route('menufina')}}" class="nav-link px-3">Finanzas</a>
                         </div>
                     </li>
                     <li>

@@ -8,6 +8,8 @@ use App\Http\Livewire\CrudPartner;
 use App\Http\Livewire\CrudPayment;
 use App\Http\Livewire\CrudPeriod;
 use App\Http\Livewire\CrudStand;
+use App\Http\Livewire\Menuemp;
+use App\Http\Livewire\Menufina;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,6 +45,8 @@ Route::middleware([
     Route::get('/partner', CrudPartner::class)->name('partner');
     Route::get('/stand', CrudStand::class)->name('stand');
     Route::get('/empadronamiento', CrudEmpadronamiento::class)->name('empadronamiento');
+    Route::get('/menuemp',Menuemp::class)->name('menuemp');
+    Route::get('/menufina',Menufina::class)->name('menufina');
 
 });
 

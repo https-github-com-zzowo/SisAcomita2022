@@ -1,4 +1,7 @@
+
+
 <div>
+
     <x-jet-dialog-modal wire:model="isOpen">
       <x-slot name="title">
         <h3>Nuevo Pariente</h3>

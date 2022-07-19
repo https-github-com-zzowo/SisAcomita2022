@@ -1,4 +1,10 @@
-<div class="py-5">
+
+<div class="py-0">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 pb-2">
+        <div class=" dark:bg-gray-700  overflow-hidden shadow-xl sm:rounded-lg px-3 py-3 mb-0">
+            <h1 class="mt-2 text-center text-2xl font-bold text-white">¡Recolección!</h1>
+        </div>
+    </div>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
         <div class="flex items-center justify-between">
@@ -11,7 +17,7 @@
             </div>
             <!--Boton nuevo   -->
             <div class="lg:ml-40 ml-10 space-x-8">
-                    <button wire:click="create()" class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer" >
+                    <button wire:click="create()" class="dark:bg-gray-700 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer" >
                         <i class="fa fa-users" aria-hidden="true"></i> Nuevo
                     </button>
                     @if($isOpen)
@@ -22,7 +28,7 @@
         <!--Tabla lista de items   -->
         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
             <table class="w-full divide-y divide-gray-200 table-auto">
-              <thead class="bg-indigo-500 text-white">
+              <thead class="dark:bg-gray-700 text-white">
                 <tr class="text-left text-xs font-bold  uppercase">
                   <td scope="col" class="px-6 py-3">ID</td>
                   <td scope="col" class="px-6 py-3">Socio</td>
@@ -38,7 +44,7 @@
                 @foreach ($collections as $item)
                 <tr class="text-sm font-medium text-gray-900">
                   <td class="px-6 py-4">
-                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-indigo-500 text-white">
+                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full dark:bg-gray-700 text-white">
                       {{$item->id}}
                     </span>
                   </td>

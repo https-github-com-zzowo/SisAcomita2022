@@ -1,4 +1,10 @@
-<div class="py-5 overflow-x-auto">
+
+<div class="py-0 overflow-x-auto">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 pb-2">
+        <div class=" dark:bg-gray-700  overflow-hidden shadow-xl sm:rounded-lg px-3 py-3 mb-0">
+            <h1 class="mt-2 text-center text-2xl font-bold text-white">¡Pagos!</h1>
+        </div>
+    </div>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
             <div class="flex items-center justify-between">

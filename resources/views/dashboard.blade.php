@@ -1,9 +1,9 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('¡Bienvenido a ACOMITA!') }}
-        </h2>
-    </x-slot>
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class=" dark:bg-gray-700  overflow-hidden shadow-xl sm:rounded-lg px-3 py-2 mb-2">
+            <h1 class="mt-2 text-center text-2xl font-bold text-white">¡Bienvenido a Acomita!</h1>
+        </div>
+    </div>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
