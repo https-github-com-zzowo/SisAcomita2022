@@ -172,8 +172,7 @@
                 <li>
                     <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
 
-
-                            <a href="{{ route('menuemp')}}" class="nav-link ">Empadronamiento</a>
+                        <a href="{{ route('menuemp')}}" class="nav-link ">Empadronamiento</a>
                         </div>
                     </li>
                     <li>
@@ -252,11 +251,9 @@
                         </a>
                     </li>
                 </ul>
-        </nav>
+            </nav>
         </div>
-
-
-    </div>
 </div>
+<main class="mt-5 pt-3">
 
-
+</main>
