@@ -16,7 +16,9 @@
         <p class="my-4 text-center text-sm text-gray-500">Realiza el registro de Recolecciones</p>
         <div class="space-x-4 bg-gray-100 py-4 text-center">
 
-         <button class="inline-block rounded-md bg-green-500 px-6 py-2 font-semibold text-green-100 shadow-md duration-75 hover:bg-green-400">Dirigirse</button>
+         <button class="inline-block rounded-md bg-green-500 px-6 py-2 font-semibold text-green-100 shadow-md duration-75 hover:bg-green-400">
+            <a class="text-white nav-link" href="{{ route('collection') }} ">Dirigirse</a>
+         </button>
          </div>
         </div>
         <div class="w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-xl">
@@ -26,7 +28,9 @@
             <h1 class="mt-2 text-center text-2xl font-bold text-gray-500">Pagos</h1>
             <p class="my-4 text-center text-sm text-gray-500">Realiza el registro de Pagos</p>
             <div class="space-x-4 bg-gray-100 py-4 text-center">
-                <button class="inline-block rounded-md bg-red-500 px-10 py-2 font-semibold text-red-100 shadow-md duration-75 hover:bg-red-400">Dirigirse</button>
+                <button class="inline-block rounded-md bg-red-500 px-10 py-2 font-semibold text-red-100 shadow-md duration-75 hover:bg-red-400">
+                    <a class="text-white nav-link" href="{{ route('payment') }} ">Dirigirse</a>
+                </button>
 
             </div>
         </div>

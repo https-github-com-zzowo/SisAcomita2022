@@ -180,13 +180,19 @@
                     <li>
                         <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
 
-                            Socios
+                            <a href="{{ route('menuemp')}}" class="nav-link ">Empadronamiento</a>
                         </div>
                     </li>
                     <li>
-                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#layouts">
+                        <a href="{{ route('empadronamiento') }}" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                            <span>Empadronar--></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="{{ route('partner') }}">
                             <span class="me-2"><i class="bi bi-person-lines-fill"></i></span>
-                            <span>Opciones</span>
+                            <span>Socios</span>
                             <span class="ms-auto">
                                 <span class="right-icon">
                                     <i class="bi bi-chevron-down"></i>
@@ -196,28 +202,19 @@
                         <div class="collapse" id="layouts">
                             <ul class="navbar-nav ps-3">
                                 <li>
-                                    <a href="#" class="nav-link px-3">
+                                    <a href="{{ route('family') }}" class="nav-link px-3">
                                         <span class="me-2"><i class="bi bi-person-plus-fill"></i></span>
-                                        <span>Registrar Nuevo Socio</span>
+                                        <span>Familiares</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="collapse" id="layouts">
-                            <ul class="navbar-nav ps-3">
-                                <li>
-                                    <a href="#" class="nav-link px-3">
-                                        <span class="me-2"><i class="bi bi-speedometer2"></i></span>
-                                        <span>...</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+
                     </li>
                     <li>
-                        <a href="{{ route('menuemp') }}" class="nav-link px-3">
+                        <a href="{{ route('stand') }}" class="nav-link px-3">
                             <span class="me-2"><i class="bi bi-book-fill"></i></span>
-                            <span>Lista de Socios</span>
+                            <span>Stands</span>
                         </a>
                     </li>
                     <li>
@@ -231,19 +228,14 @@
                     </li>
                     <li>
                         <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
-                            Actividades
+                            <a href="{{ route('activity')}}" class="nav-link ">Actividades</a>
                         </div>
                     </li>
+
                     <li>
-                        <a href="{{ route('activity') }}" class="nav-link px-3">
-                            <span class="me-2"><i class="bi bi-graph-up"></i></span>
-                            <span>Charts</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link px-3">
+                        <a href="{{ route('asistencia') }}" class="nav-link px-3">
                             <span class="me-2"><i class="bi bi-table"></i></span>
-                            <span>Tables</span>
+                            <span>Asistencias</span>
                         </a>
                     </li>
                     <li class="my-2">
@@ -251,13 +243,13 @@
                     </li>
                     <li>
                         <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
-                            <a href="{{ route('menufina')}}" class="nav-link px-3">Finanzas</a>
+                            <a href="{{ route('menufina')}}" class="nav-link ">Finanzas</a>
                         </div>
                     </li>
                     <li>
                         <a href="{{ route('collection') }}" class="nav-link px-3">
                             <span class="me-2"><i class="bi bi-calendar2-event"></i></span>
-                            <span>colectas</span>
+                            <span>Recolección</span>
                         </a>
                     </li>
                     <li>

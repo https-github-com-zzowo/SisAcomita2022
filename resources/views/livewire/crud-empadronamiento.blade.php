@@ -14,7 +14,7 @@
             </div>
             <!--Boton nuevo   -->
             <div class="lg:ml-40 ml-10 space-x-8">
-                <button wire:click="create()" class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer" >
+                <button wire:click="create()" class="dark:bg-gray-700  px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer" >
                     <i class="fa fa-users" aria-hidden="true"></i> Nuevo
                 </button>
                 @if($isOpen)
@@ -25,7 +25,7 @@
         <!--Tabla lista de items   -->
         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
             <table class="w-full divide-y divide-gray-200 table-auto">
-              <thead class="bg-indigo-500 text-white">
+              <thead class="dark:bg-gray-700  text-white">
                 <tr class="text-left text-xs font-bold  uppercase">
                   <td wire:click="order('id')" scope="col" class="px-6 py-3 cursor-pointer">ID</td>
                   <td scope="col" class="px-6 py-3 cursor-pointer">codigo</td>
@@ -40,7 +40,7 @@
                 @foreach ($empadronamientos as $item)
                 <tr class="text-sm font-medium text-gray-900">
                   <td class="px-6 py-4">
-                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-indigo-500 text-white">
+                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full dark:bg-gray-700  text-white">
                       {{$item->id}}
                     </span>
                   </td>

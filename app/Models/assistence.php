@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class assistence extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'status',
+        'activity_id',
+        'partner_id',
+
+    ];
     //Relacion de 1 a muchos inversa
     public function activity(){
         return $this->belongsTo(activity::class);
