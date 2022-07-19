@@ -260,7 +260,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link px-3">
+                        <a href="{{ route('payment')}}" class="nav-link px-3">
                             <span class="me-2"><i class="bi bi-cash-coin"></i></span>
                             <span>Pagos</span>
                         </a>

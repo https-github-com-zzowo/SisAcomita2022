@@ -5,6 +5,7 @@ use App\Http\Livewire\CrudCollection;
 use App\Http\Livewire\CrudEmpadronamiento;
 use App\Http\Livewire\CrudFamily;
 use App\Http\Livewire\CrudPartner;
+use App\Http\Livewire\CrudPayment;
 use App\Http\Livewire\CrudPeriod;
 use App\Http\Livewire\CrudStand;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +36,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
     Route::get('/collection', CrudCollection::class)->name('collection');
+    Route::get('/payment', CrudPayment::class)->name('payment');
     Route::get('/period', CrudPeriod::class)->name('period');
     Route::get('/activity', CrudActivity::class)->name('activity');
     Route::get('/family', CrudFamily::class)->name('family');

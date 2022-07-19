@@ -20,10 +20,8 @@ return new class extends Migration
             $table->string('amount');
             $table->enum('type', ['multa', 'cuota'])->default('cuota');
             $table->enum('status', [0, 1])->default(0); // 0:Pendiente, 1:Cobrado
-            $table->unsignedBigInteger('partner_id')->nullable(false);
-            $table->foreign('partner_id')->references('id')->on('partners')->onDelete('cascade');
-            $table->unsignedBigInteger('assistence_id')->nullable(false);
-            $table->foreign('assistence_id')->references('id')->on('assistences')->onDelete('cascade');
+            $table->unsignedBigInteger('activity_id')->nullable();
+            $table->foreign('activity_id')->references('id')->on('activities')->onDelete('cascade');
             $table->timestamps();
 
 
