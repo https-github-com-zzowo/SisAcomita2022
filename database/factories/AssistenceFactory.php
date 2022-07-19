@@ -20,7 +20,7 @@ class AssistenceFactory extends Factory
     {
         return [
             'datetime'=>$this->faker->date(),
-            'status'=>$this->faker->randomElement(['Asistio', 'Falta']),
+            'status'=>$this->faker->randomElement(['Asistio', 'Falta','Tarde']),
             'activity_id'=>activity::all()->random()->id,
             'partner_id'=>partner::all()->random()->id,
         ];
