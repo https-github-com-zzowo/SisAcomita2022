@@ -15,22 +15,21 @@ class partner extends Model
 
     //Relación de 1 a *
       //inversa
-      public function user(){
+    public function user(){
         return $this->belongsTo(User::class);
     }
-
-
-
     public function families(){
         return $this->hasMany(Family::class);
     }
     public function empadronamientos(){
         return $this->hasMany(Empadronamiento::class);
     }
-
-
     //Relacion de 1 a *
     public function assistences(){
         return $this->hasMany(assistence::class);
+    }
+
+    public function payments(){
+        return $this->hasMany(Payment::class);
     }
 }

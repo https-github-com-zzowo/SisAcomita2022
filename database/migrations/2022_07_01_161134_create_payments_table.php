@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver;
 
 return new class extends Migration
 {
@@ -17,13 +18,13 @@ return new class extends Migration
             $table->id();
             $table->string('import');
             $table->date('date');
-            $table->longText('observations');
-            $table->unsignedBigInteger('collection_id');
+            $table->longText('observations')->nullable()->default('Ninguna');
+            $table->unsignedBigInteger('partner_id');
+            $table->foreign('partner_id')->references('id')->on('partners')->onDelete('cascade');
+            $table->unsignedBigInteger('collection_id')->nullable();
             $table->foreign('collection_id')->references('id')->on('collections')->onDelete('cascade');
-            $table->unsignedBigInteger('assistence_id')->nullable(false);
+            $table->unsignedBigInteger('assistence_id')->nullable();
             $table->foreign('assistence_id')->references('id')->on('assistences')->onDelete('cascade');
-            $table->unsignedBigInteger('activity_id')->nullable(false);
-            $table->foreign('activity_id')->references('id')->on('activities')->onDelete('cascade');
             $table->timestamps();
         });
     }
