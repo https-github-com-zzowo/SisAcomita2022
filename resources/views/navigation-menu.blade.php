@@ -252,12 +252,11 @@
                         </a>
                     </li>
                 </ul>
-            </nav>
+        </nav>
         </div>
 
 
     </div>
 </div>
-<main class="mt-5 pt-3">
 
-</main>
+
