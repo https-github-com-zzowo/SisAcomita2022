@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -87,7 +86,7 @@
 </style>
 <body>
     <!-- top navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
                 aria-controls="offcanvasExample">
