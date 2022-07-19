@@ -21,7 +21,7 @@ return new class extends Migration
             $table->enum('type', ['multa', 'cuota'])->default('cuota');
             $table->enum('status', [0, 1])->default(0); // 0:Pendiente, 1:Cobrado
             $table->unsignedBigInteger('activity_id')->nullable();
-            $table->foreign('activity_id')->references('id')->on('activities')->onDelete('cascade');
+            $table->foreign('activity_id')->references('id')->on('activities');
             $table->timestamps();
 
 

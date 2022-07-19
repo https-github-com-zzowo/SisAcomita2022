@@ -14,26 +14,20 @@ class activity extends Model
         'description',
         'datetime',
         'status',
-
-
     ];
 
     //Relacion de * a *
     public function collections(){
         return $this->belongsToMany(Collection::class);
     }
-    //Relacion de 1 a muchos
-    public function assistences(){
-        return $this->hasMany(assistence::class);
-    }
     //Relacion de 1 a 1
     public function post(){
         return $this->hasOne(post::class);
     }
 
-    //Relacion de 1 a 1
-    public function payment(){
-        return $this->hasOne(payment::class);
+    //Relacion de 1 a *
+    public function payments(){
+        return $this->belongsTo(payment::class);
     }
 
 

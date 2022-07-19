@@ -20,19 +20,17 @@ class CrudCollection extends Component
     protected $rules=[
         'collection.name'=>'required',
         'collection.date'=>'required',
-        'collection.amount'=>'required'
+        'collection.amount'=>'required',
+        'collection.type'=>'required',
+        'collection.activity_id'=>'required'
 
     ];
 
     public function render()
     {
-
-        $collections=Collection::orderBy('id', 'desc')->paginate();
-        $payments=Payment::pluck('import', 'id', 'observations', 'date');
-        $activities=activity::pluck('name', 'id', 'description','datetime', 'status');
-        $assistences=assistence::pluck('id', 'status');
-        $partners=partner::pluck('name', 'lastname', 'id');
-        return view('livewire.crud-collection', compact('collections', 'payments', 'activities', 'assistences', 'partners'));
+        $collections=Collection::orderBy('id', 'asc')->paginate();
+        $activities=activity::pluck('name', 'id');
+        return view('livewire.crud-collection', compact('collections', 'activities'));
     }
 
     public function create(){

@@ -11,7 +11,12 @@ $maxWidth = [
     '2xl' => 'sm:max-w-2xl',
 ][$maxWidth ?? '2xl'];
 @endphp
-
+<style>
+    .jetstream-modal{
+        top: 60px;
+        left: 300px;
+    }
+</style>
 <div
     x-data="{
         show: @entangle($attributes->wire('model')).defer,

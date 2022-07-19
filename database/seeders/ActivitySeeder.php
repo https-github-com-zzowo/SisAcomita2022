@@ -18,7 +18,7 @@ class ActivitySeeder extends Seeder
         activity::create([
             'name'=>'Aniversario de la Asociasión',
             'description'=>'La asistencia deber ser obligatoria',
-            'datetime'=>'2022-01-03',
+            'datetime'=>'2022-07-03',
             'status'=>'Obligatorio',
 
         ]);

@@ -1,18 +1,15 @@
-<div class="p-6 sm:px-20 bg-white border-b border-gray-200">
-    <div>
-        <x-jet-application-logo class="block h-12 w-auto" />
-    </div>
+<div class="p-6 sm:px-20 bg-gray-700 border-b border-gray-200">
 
-    <div class="mt-8 text-2xl">
+    <div class=" text-white mt-2 text-2xl">
         ¡HOLA, {{ Auth::user()->name }}!
     </div>
 
-    <div class="mt-6 text-gray-500">
+    <div class="mt-6 text-white">
         ¿Qué deseas hacer el dia de hoy?
     </div>
 </div>
 
-<div class="bg-gray-300 bg-opacity-25 grid grid-cols-1 md:grid-cols-2 mx-3 my-2">
+<div class=" bg-opacity-25 grid grid-cols-1 md:grid-cols-2 mx-3 my-2">
     <div class=" bg-blue-400 max-w-none rounded overflow-hidden  shadow-md my-2 mx-2 hover:shadow-xl">
         <div class="px-6 py-4 ">
           <div class="font-bold text-xl mb-2">
@@ -24,9 +21,9 @@
             Podras añadir nuevos socios y añadirlos a un stand :)
           </p>
         </div>
-        <div class="px-6 py-4">
+        <div class="px-6 pt-5 py-4">
             <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-                Empezar!!!
+                <a href="{{ route('menuemp') }}" class="nav-link px-3">Empezar!!!</a>
             </button>
         </div>
     </div>
@@ -60,7 +57,7 @@
         </div>
         <div class="px-6 py-4">
             <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-                Click aqui!!!
+                <a href="{{ route('menufina')}}" class="nav-link px-3">Click Aqui!!!</a>
             </button>
         </div>
     </div>
@@ -72,13 +69,14 @@
           </p>
         </div>
         <div class="px-6 py-4">
-            <button type="button" href="{{ route('activity') }}" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-            Reportar</button>
+            <button type="button"  class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                <a href="{{ route('activity') }}" class="nav-link px-3">Reportar</a>
+            </button>
         </div>
     </div>
     <div class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
         <div>
-            <a title="soy andre" href="https://www.buymeacoffee.com/scottwindon" target="_blank" class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">
+            <a title="soy andre" href="https://github.com/ZzOwO/SisAcomita2022" target="_blank" class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">
                 <img class="object-cover object-center w-full h-full rounded-full" src="https://i.pinimg.com/originals/60/fd/e8/60fde811b6be57094e0abc69d9c2622a.jpg"/>
             </a>
         </div>
