@@ -172,95 +172,94 @@
                 <li>
                     <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
 
-                        Socios
-                    </div>
-                </li>
-                <li>
-                    <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#layouts">
-                        <span class="me-2"><i class="bi bi-person-lines-fill"></i></span>
-                        <span>Opciones</span>
-                        <span class="ms-auto">
-                            <span class="right-icon">
-                                <i class="bi bi-chevron-down"></i>
+                        <a href="{{ route('menuemp')}}" class="nav-link ">Empadronamiento</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="{{ route('empadronamiento') }}" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                            <span>Empadronar--></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#layouts">
+                            <span class="me-2"><i class="bi bi-person-lines-fill"></i></span>
+                            <span>Personas</span>
+                            <span class="ms-auto">
+                                <span class="right-icon">
+                                    <i class="bi bi-chevron-down"></i>
+                                </span>
                             </span>
-                        </span>
-                    </a>
-                    <div class="collapse" id="layouts">
-                        <ul class="navbar-nav ps-3">
-                            <li>
-                                <a href="#" class="nav-link px-3">
-                                    <span class="me-2"><i class="bi bi-person-plus-fill"></i></span>
-                                    <span>Registrar Nuevo Socio</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="collapse" id="layouts">
-                        <ul class="navbar-nav ps-3">
-                            <li>
-                                <a href="#" class="nav-link px-3">
-                                    <span class="me-2"><i class="bi bi-speedometer2"></i></span>
-                                    <span>...</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="{{ route('menuemp') }}" class="nav-link px-3">
-                        <span class="me-2"><i class="bi bi-book-fill"></i></span>
-                        <span>Lista de Socios</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('period') }}" class="nav-link px-3">
-                        <span class="me-2"><i class="bi bi-calendar-range-fill"></i></span>
-                        <span>{{ __('Periodos') }}</span>
-                    </a>
-                </li>
-                <li class="my-2">
-                    <hr class="dropdown-divider bg-light" />
-                </li>
-                <li>
-                    <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
-                        Actividades
-                    </div>
-                </li>
-                <li>
-                    <a href="{{ route('activity') }}" class="nav-link px-3">
-                        <span class="me-2"><i class="bi bi-graph-up"></i></span>
-                        <span>Charts</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link px-3">
-                        <span class="me-2"><i class="bi bi-table"></i></span>
-                        <span>Tables</span>
-                    </a>
-                </li>
-                <li class="my-2">
-                    <hr class="dropdown-divider bg-light" />
-                </li>
-                <li>
-                    <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
-                        <a href="{{ route('menufina') }}" class="nav-link px-3">Finanzas</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="{{ route('collection') }}" class="nav-link px-3">
-                        <span class="me-2"><i class="bi bi-calendar2-event"></i></span>
-                        <span>colectas</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('payment') }}" class="nav-link px-3">
-                        <span class="me-2"><i class="bi bi-cash-coin"></i></span>
-                        <span>Pagos</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+                        </a>
+
+                        <div class="collapse" id="layouts">
+                            <ul class="navbar-nav ps-3">
+                                <li>
+                                    <a href="{{ route('family') }}" class="nav-link px-3">
+                                        <span class="me-2"><i class="bi bi-person-plus-fill"></i></span>
+                                        <span>Familiares</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li>
+                        <a href="{{ route('partner') }}" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                            <span>Lista de Socios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('stand') }}" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                            <span>Stands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('period') }}" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-calendar-range-fill"></i></span>
+                            <span>{{ __('Periodos') }}</span>
+                        </a>
+                    </li>
+                    <li class="my-2">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                            <a href="{{ route('activity')}}" class="nav-link ">Actividades</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('asistencia') }}" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-table"></i></span>
+                            <span>Asistencias</span>
+                        </a>
+                    </li>
+                    <li class="my-2">
+                        <hr class="dropdown-divider bg-light" />
+                    </li>
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                            <a href="{{ route('menufina')}}" class="nav-link ">Finanzas</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="{{ route('collection') }}" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-calendar2-event"></i></span>
+                            <span>Recolección</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('payment')}}" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-cash-coin"></i></span>
+                            <span>Pagos</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 </div>
 <main class="mt-5 pt-3">
 

@@ -19,7 +19,7 @@ return new class extends Migration
         CREATE PROCEDURE sum_payment ( IN id_socio varchar(10)
             )
             BEGIN
-	            SELECT SUM(payments.import) from payments WHERE partner_id = id_socio;
+	            SELECT SUM(payments.import) as total from payments WHERE partner_id = id_socio;
         END;
 
         ";

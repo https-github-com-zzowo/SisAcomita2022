@@ -75,6 +75,16 @@
                         <!-- More people... -->
                     </tbody>
                 </table>
+
+            </div>
+            <div class="space-x-8 mt-4">
+                <button wire:click="proccollec()"
+                    class="dark:bg-gray-700 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">
+                    <i class="fa fa-calendar" aria-hidden="true"></i> Ver deuda total de 1
+                </button>
+                @if ($isOpen1)
+                    @include('livewire.proc-collec')
+                @endif
             </div>
             @if (!$collections->count())
                 <label class="py-3"> No existe ningun registro conincidente </label>

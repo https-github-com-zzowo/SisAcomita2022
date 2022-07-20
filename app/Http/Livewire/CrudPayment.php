@@ -5,12 +5,14 @@ namespace App\Http\Livewire;
 use App\Models\assistence;
 use App\Models\partner;
 use App\Models\Payment;
+use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
 class CrudPayment extends Component
 {
     public $payment, $search;
     public $isOpen=false;
+    public $isOpen1=false;
     protected $listeners=['render','delete'=>'delete'];
 
     protected $rules=[
@@ -22,14 +24,19 @@ class CrudPayment extends Component
 
     public function render()
     {
+        $procedure=DB::select('CALL sum_payment(?)', array(2));
         $payments=Payment::orderBy('id', 'asc')->paginate(10);
         $partners=partner::pluck('name', 'id');
         $assistences=assistence::pluck('status', 'partner_id', 'id');
-        return view('livewire.crud-payment', compact('payments', 'partners', 'assistences'));
+        return view('livewire.crud-payment', compact('payments', 'partners', 'assistences', 'procedure'));
     }
 
     public function create(){
         $this->isOpen=true;
+        $this->reset(['payment']);
+    }
+    public function proccollec(){
+        $this->isOpen1=true;
         $this->reset(['payment']);
     }
 

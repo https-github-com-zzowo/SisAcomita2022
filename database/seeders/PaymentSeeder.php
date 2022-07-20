@@ -17,7 +17,7 @@ class PaymentSeeder extends Seeder
     public function run()
     {
         Payment::create([
-            'import'=>'30',
+            'import'=>'200',
             'date'=>Carbon::now()->format('Y-m-d H:i:s'),
             'partner_id'=>'1',
             'collection_id'=>'1',
