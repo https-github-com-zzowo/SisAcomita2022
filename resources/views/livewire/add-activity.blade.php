@@ -24,10 +24,25 @@
                         <x-jet-input type="date" wire:model.defer="activity.datetime" placeholder="Introduzca una breve descripción" class="w-full " />
                         <x-jet-input-error for="activity.datetime" />
                     </div>
-                    <div class="mb-2 md:mr-2 md:mb-0 w-full">
+
+                    <div class="mb-2 md:mr-2 md:mb-0 w-full ">
                         <x-jet-label value="Es de tipo:" class="font-bold" />
-                        <x-jet-input type="text" wire:model.defer="activity.status" placeholder="Normal u Obligatorio" class="w-full " />
-                        <x-jet-input-error for="activity.status" />
+                        <div class="flex items-center mb-4">
+                            <input wire:model.defer="activity.status" type="radio" name="countries" value="Normal"
+                                class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:border-gray-600"
+                                checked>
+                            <label for="country-option-1" class="block ml-2 text-gray-800">
+                                Normal
+                            </label>
+                            <input wire:model.defer="activity.status" type="radio" name="countries" value="Obligatorio"
+                                class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:border-gray-600">
+                            <label for="country-option-2" class="block ml-2 text-gray-800">
+                                Obligatorio
+                            </label>
+                        </div>
+                        <div class=" items-center mb-4 ml-5">
+
+                        </div>
                     </div>
                 </div>
 
