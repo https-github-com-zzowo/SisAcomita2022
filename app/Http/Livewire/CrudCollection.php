@@ -15,6 +15,8 @@ class CrudCollection extends Component
 {
     public $collection, $search;
     public $isOpen=false;
+    public $isOpen1=false;
+
     protected $listeners=['render', 'delete'=>'delete'];
 
     protected $rules=[
@@ -35,6 +37,10 @@ class CrudCollection extends Component
 
     public function create(){
         $this->isOpen=true;
+        $this->reset(['collection']);
+    }
+    public function proccollec(){
+        $this->isOpen1=true;
         $this->reset(['collection']);
     }
 

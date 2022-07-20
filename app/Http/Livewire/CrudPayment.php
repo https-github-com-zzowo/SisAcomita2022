@@ -11,6 +11,7 @@ class CrudPayment extends Component
 {
     public $payment, $search;
     public $isOpen=false;
+    public $isOpen1=false;
     protected $listeners=['render','delete'=>'delete'];
 
     protected $rules=[
@@ -30,6 +31,10 @@ class CrudPayment extends Component
 
     public function create(){
         $this->isOpen=true;
+        $this->reset(['payment']);
+    }
+    public function proccollec(){
+        $this->isOpen1=true;
         $this->reset(['payment']);
     }
 

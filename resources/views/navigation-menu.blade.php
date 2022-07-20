@@ -182,15 +182,16 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="{{ route('partner') }}">
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#layouts">
                             <span class="me-2"><i class="bi bi-person-lines-fill"></i></span>
-                            <span>Socios</span>
+                            <span>Personas</span>
                             <span class="ms-auto">
                                 <span class="right-icon">
                                     <i class="bi bi-chevron-down"></i>
                                 </span>
                             </span>
                         </a>
+
                         <div class="collapse" id="layouts">
                             <ul class="navbar-nav ps-3">
                                 <li>
@@ -202,6 +203,12 @@
                             </ul>
                         </div>
 
+                    </li>
+                    <li>
+                        <a href="{{ route('partner') }}" class="nav-link px-3">
+                            <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                            <span>Lista de Socios</span>
+                        </a>
                     </li>
                     <li>
                         <a href="{{ route('stand') }}" class="nav-link px-3">
