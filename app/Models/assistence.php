@@ -8,7 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class assistence extends Model
 {
     use HasFactory;
-    protected $guarded=['id'];
+    protected $fillable = [
+        'status',
+        'activity_id',
+        'partner_id',
+
+    ];
     //Relacion de 1 a muchos inversa
     public function activity(){
         return $this->belongsTo(activity::class);
@@ -21,13 +26,11 @@ class assistence extends Model
 
     //Relacion de 1 * 1
     public function collection(){
-        return $this->hasOne(spouse::class);
+        return $this->hasOne(Collection::class);
     }
 
     //Relacion de 1 a 1
     public function payment(){
         return $this->hasOne(payment::class);
     }
-
-
 }

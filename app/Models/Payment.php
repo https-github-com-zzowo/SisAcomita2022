@@ -20,9 +20,9 @@ class Payment extends Model
         return $this->belongsTo(partner::class);
     }
 
-    //Relacion de 1 a 1 inversa
+    //Relacion de 1 a * inversa
     public function activity(){
-        return $this->hasOne(activity::class);
+        return $this->belongsTo(activity::class);
     }
 
     //Relacion de 1 a 1 inversa
