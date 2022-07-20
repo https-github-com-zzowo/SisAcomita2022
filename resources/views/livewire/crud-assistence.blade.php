@@ -18,7 +18,7 @@
                     <i class="fa fa-users" aria-hidden="true"></i> Nuevo
                 </button>
                 @if($isOpen)
-                    @include('livewire.add-empadronamiento')
+                    @include('livewire.add-assistence')
                 @endif
             </div>
         </div>

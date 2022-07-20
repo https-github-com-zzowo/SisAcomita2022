@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Family;
 use App\Models\partner;
 use Livewire\Component;
 
@@ -11,6 +12,7 @@ class CrudPartner extends Component
 
     public $partner,$search;
     public $isOpen=false;
+    public $family=[];
     protected $listeners=['render','delete'=>'delete'];
 
     protected $rules=[
@@ -29,6 +31,13 @@ class CrudPartner extends Component
         $partners=partner::where('name','like','%'.$this->search.'%')
                     ->orderBy('id','desc')->paginate(10);
         return view('livewire.crud-partner',compact('partners'));
+    }
+
+    public function showfamily(partner $partner){
+        $this->family=Family::where('partner_id',$partner->id)->get();
+        //$families=$this->family;
+        //return redirect()->route('family')->with('partner_id',$partner);
+        //redirect('family',compact('families'));
     }
 
     public function create(){

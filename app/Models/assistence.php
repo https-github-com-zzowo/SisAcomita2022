@@ -33,6 +33,4 @@ class assistence extends Model
     public function payment(){
         return $this->hasOne(payment::class);
     }
-
-
 }

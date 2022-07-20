@@ -13,21 +13,21 @@ class CrudAssistence extends Component
     public $isOpen=false;
     protected $listeners=['render','delete'=>'delete'];
     protected $rules=[
-        'assitence.status'=>'required',
-        'assitence.activity_id'=>'required',
-        'assitence.partner_id'=>'required',
+        'assistence.status'=>'required',
+        'assistence.activity_id'=>'required',
+        'assistence.partner_id'=>'required',
        ];
 
 
     public function render(){
 
-        $assistences=assistence::where('partner_id','like','%'.$this->search.'%')
-                    ->orderBy('partner_id')->paginate(10);
+        $assistences=assistence::where('activity_id','like','%'.$this->search.'%')
+                    ->orderBy('activity_id')->paginate(10);
                     $partners=partner::pluck('name','id');
                     $activities=activity::pluck('name','id');
 
 
-        return view('livewire.crud-assistence',compact('partners','assistences','activities','partners'));
+        return view('livewire.crud-assistence',compact('partners','assistences','activities'));
     }
 
     public function create(){

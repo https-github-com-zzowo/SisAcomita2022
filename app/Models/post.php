@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class post extends Model
 {
     use HasFactory;
+    protected $guarded=['id'];
 
     //Relacion de 1 a 1 inversa
     public function activity(){

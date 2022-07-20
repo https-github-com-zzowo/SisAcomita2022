@@ -30,5 +30,8 @@ class activity extends Model
         return $this->belongsTo(payment::class);
     }
 
+    public function activities(){
+        return $this->hasMany(assistence::class);
+    }
 
 }

@@ -21,7 +21,9 @@ class CrudActivity extends Component
 
 
     public function render()
-    {   $activities=activity::orderBy('datetime','desc')->paginate();
+    {
+        $activities=activity::where('name','like','%'.$this->search.'%')
+        ->orderBy('name')->paginate(10);
         //$assistences=assistence::pluck('id', 'status');
         return view('livewire.crud-activity',compact( 'activities'));
     }
