@@ -10,6 +10,7 @@ use App\Http\Livewire\CrudPeriod;
 use App\Http\Livewire\CrudStand;
 use App\Http\Livewire\Menuemp;
 use App\Http\Livewire\Menufina;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,5 +49,10 @@ Route::middleware([
     Route::get('/menuemp',Menuemp::class)->name('menuemp');
     Route::get('/menufina',Menufina::class)->name('menufina');
 
+});
+
+Route::get('/get-procedure', function() {
+    $these = DB::select('CALL sum_payment(?)', array(1));
+    return view('payment')->with('these', $these);
 });
 

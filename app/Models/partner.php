@@ -32,4 +32,9 @@ class partner extends Model
     public function payments(){
         return $this->hasMany(Payment::class);
     }
+
+    //Relación 1 a 1
+    public function controller(){
+        return $this->hasOne(Controller::class);
+    }
 }

@@ -13,4 +13,9 @@ class Period extends Model
     public function empadronamientos(){
         return $this->hasMany(Empadronamieto::class);
     }
+
+    //Relación 1 a 1
+    public function controller(){
+        return $this->hasOne(Controller::class);
+    }
 }

@@ -149,7 +149,7 @@
     <div class="offcanvas-body p-0">
         <span class="me-2"></span>
         <div class="profile">
-            <img src="https://www.bing.com/images/blob?bcid=TkooBAzVKWUE1Q" alt="profile_picture">
+            <img src="{{ Auth::user()->profile }}" alt="profile_picture">
             <h3>{{ Auth::user()->name }}</h3>
             <p>Administrador</p>
         </div>
