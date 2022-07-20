@@ -50,6 +50,9 @@
 
                   <td class="px-6 py-4">
                     {{-- @livewire('cliente-edit',['cliente'=>$item],key($item->id)) --}}
+                    <x-jet-button wire:click="showfamily({{$item}})"> <!-- Usamos metodos magicos -->
+                        family
+                    </x-jet-button>
                     <x-jet-button wire:click="edit({{$item}})"> <!-- Usamos metodos magicos -->
                         <i class="fas fa-edit"></i>
                     </x-jet-button>
@@ -58,11 +61,13 @@
                     </x-jet-danger-button>
                   </td>
                 </tr>
+
                 @endforeach
                 <!-- More people... -->
               </tbody>
-            </table>
+
         </div>
+
         @if(!$partners->count())
             No existe ningun registro conincidente
         @endif
@@ -75,6 +80,38 @@
         </div>
       </div>
 
+      <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+      <table class="w-full divide-y divide-gray-200 table-auto">
+        <thead class="bg-indigo-500 text-white">
+            <tr class="text-left text-xs font-bold  uppercase">
+              <td wire:click="order('id')" scope="col" class="px-6 py-3 cursor-pointer">ID</td>
+              <td scope="col" class="px-6 py-3 cursor-pointer">SOCIO</td>
+              <td scope="col" class="px-6 py-3 cursor-pointer">PANETESCO</td>
+              <td wire:click="order('fullname')" scope="col" class="px-6 py-3 cursor-pointer">NOMBRE COMPLETO</td>
+              <td scope="col" class="px-6 py-3 cursor-pointer">N°CELULAR</td>
+              <td scope="col" class="px-6 py-3">dni.</td>
+              <td scope="col" class="px-6 py-3">EDAD</td>
+            </tr>
+          </thead>
+        @foreach ($family as $f)
+        <tr class="text-sm font-medium text-gray-900">
+            <td class="px-6 py-4">
+              <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-indigo-500 text-white">
+                {{$f->id}}
+              </span>
+            </td>
+
+            <td class="px-6 py-4">{{$f->partner->name}}</td>
+            <td class="px-6 py-4">{{$f->parentesco}}</td>
+            <td class="px-6 py-4">{{$f->fullname}}</td>
+            <td class="px-6 py-4">{{$f->celphone}}</td>
+            <td class="px-6 py-4">{{$f->dni}}</td>
+            <td class="px-6 py-4">{{$f->age}}</td>
+          </tr>
+        @endforeach
+        </table>
+        </table>
+      </div>
       <!--Scripts - Sweetalert   -->
       @push('js')
         <script>
