@@ -11,11 +11,13 @@ class CrudPayment extends Component
 {
     public $payment, $search;
     public $isOpen=false;
+    public $isOpen1=false;
     protected $listeners=['render','delete'=>'delete'];
 
     protected $rules=[
         'import'=>'required',
         'date'=>'required',
+        'partner_id'=>'required'
 
     ];
 
@@ -31,6 +33,10 @@ class CrudPayment extends Component
         $this->isOpen=true;
         $this->reset(['payment']);
     }
+    public function proccollec(){
+        $this->isOpen1=true;
+        $this->reset(['payment']);
+    }
 
     public function store(){
         $this->validate();
@@ -39,7 +45,7 @@ class CrudPayment extends Component
         }else{
             $this->payment->save();
         }
-        $this->reset(['isOpen','team']);
+        $this->reset(['isOpen','payment']);
         $this->emitTo('CrudPayment','render');
         $this->emit('alert','Registro creado satisfactoriamente');
     }

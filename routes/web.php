@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\CrudActivity;
+use App\Http\Livewire\CrudAssistence;
 use App\Http\Livewire\CrudCollection;
 use App\Http\Livewire\CrudEmpadronamiento;
 use App\Http\Livewire\CrudFamily;
@@ -47,6 +48,7 @@ Route::middleware([
     Route::get('/empadronamiento', CrudEmpadronamiento::class)->name('empadronamiento');
     Route::get('/menuemp',Menuemp::class)->name('menuemp');
     Route::get('/menufina',Menufina::class)->name('menufina');
+    Route::get('/asistencia',CrudAssistence::class)->name('asistencia');
 
 });
 

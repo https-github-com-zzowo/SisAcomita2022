@@ -10,7 +10,7 @@
 </div>
 
 <div class=" bg-opacity-25 grid grid-cols-1 md:grid-cols-2 mx-3 my-2">
-    <div class=" bg-blue-400 max-w-none rounded overflow-hidden  shadow-md my-2 mx-2 hover:shadow-xl">
+    <div class=" bg-blue-600 max-w-none rounded overflow-hidden duration-300 hover:scale-105 shadow-md my-2 mx-2 hover:shadow-xl">
         <div class="px-6 py-4 ">
           <div class="font-bold text-xl mb-2">
             <svg class="h-6 w-7 inline-block" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -22,12 +22,12 @@
           </p>
         </div>
         <div class="px-6 pt-5 py-4">
-            <button type="button" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-                <a href="{{ route('menuemp') }}" class="nav-link px-3">Empezar!!!</a>
+            <button type="button" class="text-gray-900 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-500 hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                <a href="{{ route('menuemp') }}" class="nav-link px-3 text-white">Empezar!!!</a>
             </button>
         </div>
     </div>
-    <div class="bg-amber-200 max-w-none rounded overflow-hidden shadow-md my-2 mx-2 hover:shadow-xl hover:scale- ">
+    <div class="bg-amber-600 max-w-none rounded duration-300 hover:scale-105 overflow-hidden shadow-md my-2 mx-2 hover:shadow-xl hover:scale- ">
         <div class="px-6 py-4  ">
           <div class="font-bold text-xl mb-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -40,12 +40,12 @@
           </p>
         </div>
         <div class="px-6 py-4">
-            <button type="button" href="{{ route('activity') }}" class=" text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+            <button type="button" href="{{ route('activity') }}" class=" text-gray-900 bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 hover:bg-gradient-to-br focus:ring-4 focus:ring-amber-300 dark:focus:ring-amber-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
                 <a href="{{ route('activity') }}" class="nav-link px-3">Vamos!!!</a>
             </button>
         </div>
     </div>
-    <div class="bg-green-400 max-w-none rounded overflow-hidden shadow-md my-2 mx-2 hover:shadow-xl">
+    <div class="bg-green-600 max-w-none duration-300 hover:scale-105 rounded overflow-hidden shadow-md my-2 mx-2 hover:shadow-xl">
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -61,7 +61,7 @@
             </button>
         </div>
     </div>
-    <div class="bg-red-300 border-b-green-900 max-w-none rounded overflow-hidden shadow-md my-2 mx-2 hover:shadow-xl ">
+    <div class="bg-red-600 duration-300 hover:scale-105 max-w-none rounded overflow-hidden shadow-md my-2 mx-2 hover:shadow-xl ">
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">REPORTAR PROBLEMA</div>
           <p class="text-grey-darker text-base">
@@ -69,7 +69,7 @@
           </p>
         </div>
         <div class="px-6 py-4">
-            <button type="button"  class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+            <button type="button"  class="text-white bg-gradient-to-r from-red-200 via-red-400 to-red-500 hover:bg-gradient-to-br focus:ring-4 focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
                 <a href="{{ route('activity') }}" class="nav-link px-3">Reportar</a>
             </button>
         </div>

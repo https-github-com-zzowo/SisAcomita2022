@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('assistences', function (Blueprint $table) {
             $table->id();
             //$table->date('datetime');
-            $table->enum('status', ['Asistio', 'Falta']);
+            $table->enum('status', ['Asistio', 'Falta','Tarde']);
             $table->unsignedBigInteger('activity_id');
             $table->foreign('activity_id')->references('id')->on('activities')->onDelete('cascade');
             $table->unsignedBigInteger('partner_id');

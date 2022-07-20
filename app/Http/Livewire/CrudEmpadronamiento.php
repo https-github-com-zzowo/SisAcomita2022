@@ -24,7 +24,7 @@ class CrudEmpadronamiento extends Component
     ];
 
     public function render(){
-        //$partners=partner::orderBy('id','desc')->paginate();
+
         $empadronamientos=Empadronamieto::where('code','like','%'.$this->search.'%')
                     ->orderBy('id','desc')->paginate(10);
                     $partners=partner::pluck('name','id');
