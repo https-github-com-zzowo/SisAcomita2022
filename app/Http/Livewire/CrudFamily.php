@@ -29,8 +29,7 @@ class CrudFamily extends Component
         $families=Family::where('fullname', 'like', '%'.$this->search.'%')
             ->orderBy('id', 'asc')->paginate(10);
         $partners=partner::pluck('name','id');
-        //$family=Family::where('partner_id',$partners->id)->get();
-        //return view('livewire.crud-family', compact('families','partners'));
+        return view('livewire.crud-family', compact('families','partners'));
     }
 
     public function create(){
