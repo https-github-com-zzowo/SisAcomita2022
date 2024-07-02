@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->string('import');
             $table->date('date');
-            $table->longText('observations')->nullable()->default('Ninguna');
+            $table->string('observations');
             $table->unsignedBigInteger('partner_id');
             $table->foreign('partner_id')->references('id')->on('partners')->onDelete('cascade');
             $table->unsignedBigInteger('collection_id')->nullable();
