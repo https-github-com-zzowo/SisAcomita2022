@@ -39,19 +39,29 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    Route::get('/collection', CrudCollection::class)->name('collection');
+        Route::get('/collection', CrudCollection::class)->name('collection');
     Route::get('/payment', CrudPayment::class)->name('payment');
-    Route::get('/period', CrudPeriod::class)->name('period');
+
     Route::get('/activity', CrudActivity::class)->name('activity');
     Route::get('/family', CrudFamily::class)->name('family');
     Route::get('/partner', CrudPartner::class)->name('partner');
     Route::get('/stand', CrudStand::class)->name('stand');
     Route::post('/stand', [CrudStand::class, 'store'])->name('stands.store');
-    Route::delete('/stand/{id}', [CrudStand::class, 'delete'])->name('stand.delete');
+
+    Route::get('/period', CrudPeriod::class)->name('period');
+    Route::post('/period', [CrudPeriod::class, 'store'])->name('period.store');
+
+    Route::get('/activity', CrudActivity::class)->name('activity');
+    Route::post('/activity', [CrudActivity::class, 'store'])->name('activity.store');
+
+    Route::get('/partner', CrudPartner::class)->name('partner');
+    Route::post('/partner', [CrudPartner::class, 'store'])->name('partner.store');
+
     Route::get('/empadronamiento', CrudEmpadronamiento::class)->name('empadronamiento');
     Route::get('/menuemp',Menuemp::class)->name('menuemp');
     Route::get('/menufina',Menufina::class)->name('menufina');
     Route::get('/asistencia',CrudAssistence::class)->name('asistencia');
+
 
 });
 
