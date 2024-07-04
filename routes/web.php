@@ -46,6 +46,8 @@ Route::middleware([
     Route::get('/family', CrudFamily::class)->name('family');
     Route::get('/partner', CrudPartner::class)->name('partner');
     Route::get('/stand', CrudStand::class)->name('stand');
+    Route::post('/stand', [CrudStand::class, 'store'])->name('stands.store');
+    Route::delete('/stand/{id}', [CrudStand::class, 'delete'])->name('stand.delete');
     Route::get('/empadronamiento', CrudEmpadronamiento::class)->name('empadronamiento');
     Route::get('/menuemp',Menuemp::class)->name('menuemp');
     Route::get('/menufina',Menufina::class)->name('menufina');
